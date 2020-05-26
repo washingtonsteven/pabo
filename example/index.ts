@@ -1,3 +1,7 @@
+/**
+ * Example for how to use PABO in Typescript
+ */
+
 import Runner from "@base/runner";
 import Entity from "@base/Entity";
 import Illana from "./entities/beings/Illana";
@@ -20,4 +24,7 @@ import Map from "./entities/places/_map";
   console.log(runner.step());
   console.log(runner.step());
   console.log(runner.summary());
+  console.log(
+    `---\nCheck out the source for this example in ./example/example.ts!\n---`
+  );
 })();

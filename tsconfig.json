@@ -4,10 +4,12 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@base/*": ["dist/base/*"]
+      "@base/*": ["base/*"]
     },
     "outDir": "dist",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
+    //"allowJs": true
   }
 }

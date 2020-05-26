@@ -29,7 +29,7 @@ Runner - The engine that ingests all these entities and does stuff to them. Basi
 1. Clone the repo
 2. `yarn install`
 3. Install Typescript `yarn global add typescript`
-4. `yarn start` to run the example script (also compiles Typescript form `base-src` to `base`)
+4. `yarn example` to run the example script (also compiles Typescript form `base-src` to `base`)
 
 ---
 

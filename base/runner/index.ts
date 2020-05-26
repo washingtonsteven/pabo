@@ -143,9 +143,12 @@ class Runner {
     result += beings.map(this.announceBeing).join("\n");
     result += `\n${placeAnnounceSep}\n`;
 
+    // Beings not in the current place
     const otherBeings = this.getOutsideBeings();
-    result += otherBeings.map(this.announceBeing).join("\n");
-    result += `\n${placeAnnounceSep}\n`;
+    if (otherBeings && otherBeings.length) {
+      result += otherBeings.map(this.announceBeing).join("\n");
+      result += `\n${placeAnnounceSep}\n`;
+    }
 
     return result;
   }
