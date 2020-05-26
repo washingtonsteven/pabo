@@ -2,22 +2,23 @@
   "name": "pabo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "@std/esm": "cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "tsc",
-    "start": "node index.js"
+    "start": "node -r module-alias/register dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@std/esm": "0.26.0",
+    "@types/node": "^14.0.5",
     "esm": "^3.2.25",
     "module-alias": "^2.2.2"
   },
   "_moduleAliases": {
-    "@base": "./base"
+    "@base": "./dist/base"
   },
   "peerDependencies": {
     "typescript": "^3.9.3"

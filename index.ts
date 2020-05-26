@@ -1,14 +1,15 @@
-require("module-alias/register");
-const Runner = require("@base/runner");
-const Illana = require("./entities/beings/Illana");
-const Shopkeeper = require("./entities/beings/Shopkeeper");
-const Jack = require("./entities/beings/Jack");
-// Exports an array of all the places
-const Map = require("./entities/places/_map");
+import Runner from "@base/runner";
+import Entity from "@base/Entity";
+import Illana from "./entities/beings/Illana";
+import Shopkeeper from "./entities/beings/Shopkeeper";
+import Jack from "./entities/beings/Jack";
+// An array of all places
+import Map from "./entities/places/_map";
 
 (() => {
   // TODO: Remove Map from runner, since we only need to know about the current place (and its neighbors)
-  const runner = new Runner([Illana, Shopkeeper, Jack].concat(Map), Map[0]);
+  const worldObjects: Entity[] = [Illana, Shopkeeper, Jack, ...Map];
+  const runner = new Runner(worldObjects, Map[0]);
   console.log(runner.summary());
   console.log(runner.step());
   console.log(runner.step());

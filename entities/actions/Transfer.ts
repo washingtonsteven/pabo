@@ -1,6 +1,6 @@
-const Action = require("@base/Action");
-const Being = require("@base/Being");
-const pick = require("@base/std/utils/pick");
+import Action from "@base/Action";
+import Being from "@base/Being";
+import pick from "@base/std/utils/pick";
 
 const Transfer = new Action(
   "Transfer",
@@ -9,7 +9,7 @@ const Transfer = new Action(
    * @param {Being} recipient
    * @param {Action} thisAction
    */
-  (giver, recipient, thisAction) => {
+  (giver: Being, recipient: Being, thisAction) => {
     const transferredItem = pick(giver.getInventory());
     if (!transferredItem) {
       return {
@@ -38,4 +38,4 @@ const Transfer = new Action(
   true
 );
 
-module.exports = Transfer;
+export default Transfer;

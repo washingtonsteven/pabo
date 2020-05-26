@@ -4,9 +4,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@base/*": ["base-src/*"]
+      "@base/*": ["dist/base/*"]
     },
-    "outDir": "base",
+    "outDir": "dist",
     "sourceMap": true,
     "esModuleInterop": true
   }

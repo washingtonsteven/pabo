@@ -1,5 +1,5 @@
-const Action = require("@base/Action");
-const pick = require("@base/std/utils/pick");
+import Action from "@base/Action";
+import pick from "@base/std/utils/pick";
 
 const Travel = new Action(
   "Move",
@@ -21,4 +21,4 @@ const Travel = new Action(
   false
 );
 
-module.exports = Travel;
+export default Travel;
