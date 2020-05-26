@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@base/*": ["base-src/*"]
+    },
+    "outDir": "base",
+    "sourceMap": true,
+    "esModuleInterop": true
+  }
+}
