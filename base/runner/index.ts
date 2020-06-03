@@ -114,7 +114,7 @@ class Runner {
     return actionResult.message;
   }
 
-  announceBeing(being) {
+  summarizeBeing(being) {
     let beingString = "";
     beingString += `${being.name} is in ${being.place.name}.\n\t`;
     beingString += being.hasInventory()
@@ -140,13 +140,13 @@ class Runner {
 
     // Being state. Name, Inventory, Actions
     const beings = this.getBeings();
-    result += beings.map(this.announceBeing).join("\n");
+    result += beings.map(this.summarizeBeing).join("\n");
     result += `\n${placeAnnounceSep}\n`;
 
     // Beings not in the current place
     const otherBeings = this.getOutsideBeings();
     if (otherBeings && otherBeings.length) {
-      result += otherBeings.map(this.announceBeing).join("\n");
+      result += otherBeings.map(this.summarizeBeing).join("\n");
       result += `\n${placeAnnounceSep}\n`;
     }
 
